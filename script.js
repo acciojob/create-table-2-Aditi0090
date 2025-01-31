@@ -1,16 +1,19 @@
 function createTable() {
-    let rn = prompt("Input number of rows");
-    if (rn === null || rn.trim() === "" || isNaN(rn) || rn <= 0) return; 
+    setTimeout(() => {
+        let rn = window.prompt("Input number of rows");
 
-    rn = Number(rn);
-    let table = document.getElementById("myTable");
-    table.innerHTML = ""; 
+        if (rn === null || rn.trim() === "" || isNaN(rn) || rn <= 0) return;
 
-    for (let i = 0; i < rn; i++) {
-        let row = table.insertRow();
-        for (let j = 0; j < rn; j++) {
-            let cell = row.insertCell();
-            cell.textContent = `Row-${i} Column-${j}`;
+        rn = Number(rn);
+        let table = document.getElementById("myTable");
+        table.innerHTML = "";
+
+        for (let i = 0; i < rn; i++) {
+            let row = table.insertRow();
+            for (let j = 0; j < rn; j++) {
+                let cell = row.insertCell();
+                cell.textContent = `Row-${i} Column-${j}`;
+            }
         }
-    }
+    }, 0);
 }
