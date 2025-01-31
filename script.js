@@ -2,7 +2,7 @@ function createTable() {
     setTimeout(() => {
         let rn = window.prompt("Input number of rows");
 
-        if (rn === null || rn.trim() === "" || isNaN(rn) || rn <= 0) return;
+        if (rn === null || rn.trim() === "" || isNaN(rn) || Number(rn) <= 0) return;
 
         rn = Number(rn);
         let table = document.getElementById("myTable");
